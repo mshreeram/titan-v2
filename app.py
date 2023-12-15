@@ -23,7 +23,7 @@ def index():
     print(translate)
     filename = f.filename
     f.save('video/' + filename)
-    dub('video/' + filename, 'static/outdir', 'en-IN', [translate_lang], storageBucket=None, phraseHints=[], dubSrc=False, speakerCount=1, voices={translate_lang: f"{translate_lang}-Standard-{voice}"})
+    dub('video/' + filename, 'static/outdir', 'en-IN', [translate_lang], storageBucket=None, phraseHints=[], speakerCount=1, voices={translate_lang: f"{translate_lang}-Standard-{voice}"})
     baseName = filename.split('.')[0]
     if translate:
       text_super('video/' + filename, baseName, translate_lang)
